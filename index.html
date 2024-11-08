@@ -1,0 +1,813 @@
+<!doctype html>
+<head>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="script.js"></script>
+	<style>
+		td {
+			text-align: center;
+			vertical-align: middle;
+		}
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		table {
+			margin-bottom: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="max-w-md mx-auto">
+		<h1 class="text-3xl font-bold"><span id="span1"></span>/<span id="span2"></span></h1>
+		<table class="table-auto" id="mainTable">
+			<thead>
+				<tr>
+					<th class="px-4 py-2">Name</th>
+					<th class="px-4 py-2">Image</th>
+					<th class="px-4 py-2">Normal</th>
+					<th class="px-4 py-2">Light</th>
+					<th class="px-4 py-2">Dark</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Spectral Wolf</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/62/Spectral_Wolf.png/revision/latest/scale-to-width-down/50?cb=20201204141949"</td>
+					<td class="border px-4 py-2"><input id="Spectral_Wolf_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Wolf_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Wolf_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Spectral Toad</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/2/28/Spectral_Toad.png/revision/latest/scale-to-width-down/50?cb=20201205055107"</td>
+					<td class="border px-4 py-2"><input id="Spectral_Toad_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Toad_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Toad_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Spectral Eagle</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/7d/Spectral_Eagle.png/revision/latest/scale-to-width-down/47?cb=20201204142110"</td>
+					<td class="border px-4 py-2"><input id="Spectral_Eagle_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Eagle_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Eagle_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Spectral Lion</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/62/Spectral_Lion.png/revision/latest/scale-to-width-down/50?cb=20201205054922"</td>
+					<td class="border px-4 py-2"><input id="Spectral_Lion_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Lion_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spectral_Lion_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Blob</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/9d/Blob.png/revision/latest/scale-to-width-down/50?cb=20190404224210"</td>
+					<td class="border px-4 py-2"><input id="Blob_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Blob_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Blob_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Magmapillar</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/e/ee/Magmapillar.png/revision/latest/scale-to-width-down/50?cb=20220630101612"</td>
+					<td class="border px-4 py-2"><input id="Magmapillar_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Magmapillar_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Magmapillar_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Rocky</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/82/Rocky.png/revision/latest/scale-to-width-down/20?cb=20190404224340"</td>
+					<td class="border px-4 py-2"><input id="Rocky_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rocky_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rocky_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Vaero</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/1/1e/Vaero.png/revision/latest/scale-to-width-down/50?cb=20220630101803"</td>
+					<td class="border px-4 py-2"><input id="Vaero_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vaero_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vaero_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Catzerker</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/b/b9/Catzerker.png/revision/latest/scale-to-width-down/50?cb=20220630101500"</td>
+					<td class="border px-4 py-2"><input id="Catzerker_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Catzerker_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Catzerker_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Yowie</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/7e/Yowie.png/revision/latest/scale-to-width-down/38?cb=20190404224348"</td>
+					<td class="border px-4 py-2"><input id="Yowie_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Yowie_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Yowie_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Steam Golem</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/2/23/Steam_Golem.png/revision/latest/scale-to-width-down/27?cb=20190404224341"</td>
+					<td class="border px-4 py-2"><input id="Steam_Golem_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Steam_Golem_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Steam_Golem_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Monk</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/4/44/Monk.png/revision/latest/scale-to-width-down/24?cb=20220630101659"</td>
+					<td class="border px-4 py-2"><input id="Monk_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Monk_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Monk_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Grummy</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/89/Grummy.png/revision/latest/scale-to-width-down/40?cb=20190404224331"</td>
+					<td class="border px-4 py-2"><input id="Grummy_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Grummy_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Grummy_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Tengu</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/37/Tengu.png/revision/latest/scale-to-width-down/35?cb=20190404224344"</td>
+					<td class="border px-4 py-2"><input id="Tengu_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Tengu_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Tengu_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Fungi</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/b/be/Fungi.png/revision/latest/scale-to-width-down/40?cb=20190404224217"</td>
+					<td class="border px-4 py-2"><input id="Fungi_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Fungi_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Fungi_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Frosty</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/3d/Frosty.png/revision/latest/scale-to-width-down/26?cb=20190404224216"</td>
+					<td class="border px-4 py-2"><input id="Frosty_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Frosty_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Frosty_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Minitaur</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/2/25/Minitaur.png/revision/latest/scale-to-width-down/32?cb=20220630101642"</td>
+					<td class="border px-4 py-2"><input id="Minitaur_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Minitaur_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Minitaur_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Specter</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/f/f1/Specter.png/revision/latest/scale-to-width-down/23?cb=20190412033646"</td>
+					<td class="border px-4 py-2"><input id="Specter_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Specter_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Specter_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Crackle Knight</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/32/Crackle_Knight.png/revision/latest/scale-to-width-down/31?cb=20190404224215"</td>
+					<td class="border px-4 py-2"><input id="Crackle_Knight_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Crackle_Knight_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Crackle_Knight_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">G'rulu</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/38/G%27rulu.png/revision/latest/scale-to-width-down/41?cb=20190412024012"</td>
+					<td class="border px-4 py-2"><input id="G'rulu_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="G'rulu_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="G'rulu_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Mad Eye</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/c/c2/Mad_Eye.png/revision/latest/scale-to-width-down/43?cb=20190412024013"</td>
+					<td class="border px-4 py-2"><input id="Mad_Eye_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mad_Eye_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mad_Eye_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Nightwing</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/8a/Nightwing.png/revision/latest/scale-to-width-down/50?cb=20190412024016"</td>
+					<td class="border px-4 py-2"><input id="Nightwing_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Nightwing_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Nightwing_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Toxiquus</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/7d/Toxiquus.png/revision/latest/scale-to-width-down/20?cb=20190428160713"</td>
+					<td class="border px-4 py-2"><input id="Toxiquus_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Toxiquus_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Toxiquus_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Beetloid</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/71/Beetloid.png/revision/latest/scale-to-width-down/50?cb=20220630102133"</td>
+					<td class="border px-4 py-2"><input id="Beetloid_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Beetloid_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Beetloid_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Druid Oak</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/74/Druid_Oak.png/revision/latest/scale-to-width-down/22?cb=20190412024008"</td>
+					<td class="border px-4 py-2"><input id="Druid_Oak_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Druid_Oak_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Druid_Oak_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Magmamoth</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/b/b0/Magmamoth.png/revision/latest/scale-to-width-down/50?cb=20220630101558"</td>
+					<td class="border px-4 py-2"><input id="Magmamoth_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Magmamoth_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Magmamoth_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Molebear</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/38/Molebear.png/revision/latest/scale-to-width-down/29?cb=20190412024015"</td>
+					<td class="border px-4 py-2"><input id="Molebear_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Molebear_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Molebear_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Glowfly</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/68/Glowfly.png/revision/latest/scale-to-width-down/40?cb=20190412024009"</td>
+					<td class="border px-4 py-2"><input id="Glowfly_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Glowfly_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Glowfly_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Goblin Brute</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/f/f7/Goblin_Brute.png/revision/latest/scale-to-width-down/44?cb=20190412024009"</td>
+					<td class="border px-4 py-2"><input id="Goblin_Brute_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Brute_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Brute_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Goblin Hood</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/98/Goblin_Hood.png/revision/latest/scale-to-width-down/36?cb=20190412024011"</td>
+					<td class="border px-4 py-2"><input id="Goblin_Hood_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Hood_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Hood_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Goblin Warlock</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/2/24/Goblin_Warlock.png/revision/latest/scale-to-width-down/38?cb=20190412024136"</td>
+					<td class="border px-4 py-2"><input id="Goblin_Warlock_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Warlock_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Warlock_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Goblin King</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/5c/Goblin_King.png/revision/latest/scale-to-width-down/42?cb=20220630101530"</td>
+					<td class="border px-4 py-2"><input id="Goblin_King_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_King_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_King_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Raduga</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/71/Raduga.png/revision/latest/scale-to-width-down/33?cb=20220630101730"</td>
+					<td class="border px-4 py-2"><input id="Raduga_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Raduga_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Raduga_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Ice Blob</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/64/Ice_Blob.png/revision/latest/scale-to-width-down/50?cb=20190909034435"</td>
+					<td class="border px-4 py-2"><input id="Ice_Blob_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ice_Blob_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ice_Blob_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Caraglow</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/de/Caraglow.png/revision/latest/scale-to-width-down/50?cb=20220630101439"</td>
+					<td class="border px-4 py-2"><input id="Caraglow_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Caraglow_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Caraglow_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Aurumtail</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/74/Aurumtail.png/revision/latest/scale-to-width-down/44?cb=20220630101422"</td>
+					<td class="border px-4 py-2"><input id="Aurumtail_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Aurumtail_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Aurumtail_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Megataur</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/1/1e/Megataur.png/revision/latest/scale-to-width-down/26?cb=20220630101628"</td>
+					<td class="border px-4 py-2"><input id="Megataur_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Megataur_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Megataur_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Mogwai</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/d9/Mogwai.png/revision/latest/scale-to-width-down/30?cb=20190909023337"</td>
+					<td class="border px-4 py-2"><input id="Mogwai_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mogwai_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mogwai_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Crystal Snail</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/1/14/Crystal_Snail.png/revision/latest/scale-to-width-down/50?cb=20220630101515"</td>
+					<td class="border px-4 py-2"><input id="Crystal_Snail_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Crystal_Snail_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Crystal_Snail_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Akhlut</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/2/25/Akhlut.png/revision/latest/scale-to-width-down/50?cb=20220630102122"</td>
+					<td class="border px-4 py-2"><input id="Akhlut_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Akhlut_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Akhlut_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Blade Widow</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/d2/Blade_Widow.png/revision/latest/scale-to-width-down/41?cb=20190909022715"</td>
+					<td class="border px-4 py-2"><input id="Blade_Widow_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Blade_Widow_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Blade_Widow_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Ninki</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/1/1b/Ninki.png/revision/latest/scale-to-width-down/50?cb=20190909023353"</td>
+					<td class="border px-4 py-2"><input id="Ninki_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ninki_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ninki_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Ninki Nanka</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/dc/Ninki_Nanka.png/revision/latest/scale-to-width-down/45?cb=20200910060010"</td>
+					<td class="border px-4 py-2"><input id="Ninki_Nanka_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ninki_Nanka_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ninki_Nanka_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Vasuki</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/de/Vasuki.png/revision/latest/scale-to-width-down/47?cb=20190909023557"</td>
+					<td class="border px-4 py-2"><input id="Vasuki_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vasuki_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vasuki_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Kame</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/2/2c/Kame.png/revision/latest/scale-to-width-down/39?cb=20220630101545"</td>
+					<td class="border px-4 py-2"><input id="Kame_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Kame_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Kame_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Sycophantom</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/b/b8/Sycophantom.png/revision/latest/scale-to-width-down/46?cb=20220630101747"</td>
+					<td class="border px-4 py-2"><input id="Sycophantom_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Sycophantom_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Sycophantom_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Imori</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/0/00/Imori.png/revision/latest/scale-to-width-down/47?cb=20190909023136"</td>
+					<td class="border px-4 py-2"><input id="Imori_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Imori_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Imori_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Qilin</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/9b/Qilin.png/revision/latest/scale-to-width-down/48?cb=20220630101716"</td>
+					<td class="border px-4 py-2"><input id="Qilin_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Qilin_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Qilin_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Sizzle Knight</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/94/Sizzle_Knight.png/revision/latest/scale-to-width-down/28?cb=20190909023533"</td>
+					<td class="border px-4 py-2"><input id="Sizzle_Knight_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Sizzle_Knight_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Sizzle_Knight_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Koi</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/66/Koi.png/revision/latest/scale-to-width-down/50?cb=20190909023148"</td>
+					<td class="border px-4 py-2"><input id="Koi_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Koi_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Koi_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Tanuki</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/a/a2/Tanuki.png/revision/latest/scale-to-width-down/35?cb=20190921173152"</td>
+					<td class="border px-4 py-2"><input id="Tanuki_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Tanuki_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Tanuki_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Kanko</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/0/00/Kanko.png/revision/latest/scale-to-width-down/33?cb=20190921173151"</td>
+					<td class="border px-4 py-2"><input id="Kanko_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Kanko_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Kanko_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Dodo</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/f/fc/Dodo.png/revision/latest/scale-to-width-down/33?cb=20191108202121"</td>
+					<td class="border px-4 py-2"><input id="Dodo_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dodo_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dodo_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Kongamato</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/8d/Kongamato.png/revision/latest/scale-to-width-down/50?cb=20191108202123"</td>
+					<td class="border px-4 py-2"><input id="Kongamato_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Kongamato_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Kongamato_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Ucan</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/62/Ucan.png/revision/latest/scale-to-width-down/41?cb=20191108202153"</td>
+					<td class="border px-4 py-2"><input id="Ucan_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ucan_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ucan_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Brawlish</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/61/Brawlish.png/revision/latest/scale-to-width-down/50?cb=20191108202120"</td>
+					<td class="border px-4 py-2"><input id="Brawlish_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Brawlish_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Brawlish_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Thornish</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/3d/Thornish.png/revision/latest/scale-to-width-down/50?cb=20191108202127"</td>
+					<td class="border px-4 py-2"><input id="Thornish_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Thornish_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Thornish_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Nautilid</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/0/02/Nautilid.png/revision/latest/scale-to-width-down/35?cb=20191108202124"</td>
+					<td class="border px-4 py-2"><input id="Nautilid_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Nautilid_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Nautilid_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Silvaero</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/e/e8/Silvaero.png/revision/latest/scale-to-width-down/40?cb=20191108202126"</td>
+					<td class="border px-4 py-2"><input id="Silvaero_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Silvaero_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Silvaero_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Elderjel</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/53/Elderjel.png/revision/latest/scale-to-width-down/31?cb=20191108202122"</td>
+					<td class="border px-4 py-2"><input id="Elderjel_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Elderjel_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Elderjel_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Manticorb</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/3a/Manticorb.png/revision/latest/scale-to-width-down/49?cb=20191207140846"</td>
+					<td class="border px-4 py-2"><input id="Manticorb_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Manticorb_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Manticorb_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Goblin Miner</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/b/ba/Goblin_Miner.png/revision/latest/scale-to-width-down/36?cb=20200229020549"</td>
+					<td class="border px-4 py-2"><input id="Goblin_Miner_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Miner_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Miner_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Salahammer</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/f/f8/Salahammer.png/revision/latest/scale-to-width-down/41?cb=20200228205110"</td>
+					<td class="border px-4 py-2"><input id="Salahammer_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Salahammer_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Salahammer_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Lava Blob</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/58/Lava_Blob.png/revision/latest/scale-to-width-down/50?cb=20200228205115"</td>
+					<td class="border px-4 py-2"><input id="Lava_Blob_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Lava_Blob_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Lava_Blob_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Glowdra</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/e/e9/Glowdra.png/revision/latest/scale-to-width-down/25?cb=20200229020548"</td>
+					<td class="border px-4 py-2"><input id="Glowdra_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Glowdra_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Glowdra_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Draconov</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/7f/Draconov.png/revision/latest/scale-to-width-down/37?cb=20200229020546"</td>
+					<td class="border px-4 py-2"><input id="Draconov_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Draconov_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Draconov_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Dracogran</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/32/Dracogran.png/revision/latest/scale-to-width-down/50?cb=20200229020544"</td>
+					<td class="border px-4 py-2"><input id="Dracogran_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dracogran_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dracogran_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Asura</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/52/Asura.png/revision/latest/scale-to-width-down/30?cb=20200229020543"</td>
+					<td class="border px-4 py-2"><input id="Asura_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Asura_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Asura_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Skorch</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/b/b5/Skorch.png/revision/latest/scale-to-width-down/48?cb=20200228205113"</td>
+					<td class="border px-4 py-2"><input id="Skorch_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Skorch_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Skorch_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Stolby</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/2/2d/Stolby.png/revision/latest/scale-to-width-down/21?cb=20200723233525"</td>
+					<td class="border px-4 py-2"><input id="Stolby_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Stolby_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Stolby_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Ornithopter</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/e/e4/Ornithopter.png/revision/latest/scale-to-width-down/50?cb=20200724232850"</td>
+					<td class="border px-4 py-2"><input id="Ornithopter_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ornithopter_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ornithopter_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Polterofen</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/8f/Polterofen.png/revision/latest/scale-to-width-down/28?cb=20200723233209"</td>
+					<td class="border px-4 py-2"><input id="Polterofen_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Polterofen_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Polterofen_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Oculus</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/50/Oculus.png/revision/latest/scale-to-width-down/45?cb=20200724232849"</td>
+					<td class="border px-4 py-2"><input id="Oculus_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Oculus_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Oculus_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Mimic</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/a/a8/Mimic.png/revision/latest/scale-to-width-down/40?cb=20200723233856"</td>
+					<td class="border px-4 py-2"><input id="Mimic_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mimic_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mimic_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Goblin Pilot</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/c/c3/Goblin_Pilot.png/revision/latest/scale-to-width-down/50?cb=20200724232848"</td>
+					<td class="border px-4 py-2"><input id="Goblin_Pilot_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Pilot_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Goblin_Pilot_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Shockhopper</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/82/Shockhopper.png/revision/latest/scale-to-width-down/31?cb=20200608155041"</td>
+					<td class="border px-4 py-2"><input id="Shockhopper_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Shockhopper_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Shockhopper_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Targoat</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/78/Targoat.png/revision/latest/scale-to-width-down/34?cb=20200608155042"</td>
+					<td class="border px-4 py-2"><input id="Targoat_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Targoat_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Targoat_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Dracozul</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/d0/Dracozul.png/revision/latest/scale-to-width-down/44?cb=20200608155040"</td>
+					<td class="border px-4 py-2"><input id="Dracozul_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dracozul_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dracozul_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Troll</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/f/f3/Troll.png/revision/latest/scale-to-width-down/43?cb=20200905030608"</td>
+					<td class="border px-4 py-2"><input id="Troll_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Troll_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Troll_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Brutus</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/5a/Brutus.png/revision/latest/scale-to-width-down/44?cb=20200905030453"</td>
+					<td class="border px-4 py-2"><input id="Brutus_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Brutus_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Brutus_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Mega Rock</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/0/0f/Mega_Rock.png/revision/latest/scale-to-width-down/44?cb=20200503224513"</td>
+					<td class="border px-4 py-2"><input id="Mega_Rock_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mega_Rock_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mega_Rock_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Argiope</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/3/36/Argiope.png/revision/latest/scale-to-width-down/50?cb=20200503224510"</td>
+					<td class="border px-4 py-2"><input id="Argiope_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Argiope_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Argiope_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Arachlich</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/70/Arachlich.png/revision/latest/scale-to-width-down/36?cb=20200503224509"</td>
+					<td class="border px-4 py-2"><input id="Arachlich_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Arachlich_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Arachlich_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Moccus</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/f/fc/Moccus.png/revision/latest/scale-to-width-down/50?cb=20200503224514"</td>
+					<td class="border px-4 py-2"><input id="Moccus_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Moccus_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Moccus_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Promethean</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/4/41/Promethean.png/revision/latest/scale-to-width-down/32?cb=20200503224515"</td>
+					<td class="border px-4 py-2"><input id="Promethean_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Promethean_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Promethean_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Draconoir</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/97/Draconoir.png/revision/latest/scale-to-width-down/33?cb=20200503224512"</td>
+					<td class="border px-4 py-2"><input id="Draconoir_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Draconoir_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Draconoir_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Spinner</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/7b/Spinner.png/revision/latest/scale-to-width-down/44?cb=20200503231427"</td>
+					<td class="border px-4 py-2"><input id="Spinner_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spinner_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Spinner_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Plague Egg</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/c/c6/Plague_Egg.png/revision/latest/scale-to-width-down/36?cb=20201205054647"</td>
+					<td class="border px-4 py-2"><input id="Plague_Egg_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Plague_Egg_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Plague_Egg_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Sutsune</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/c/c0/Sutsune.png/revision/latest/scale-to-width-down/44?cb=20201205054424"</td>
+					<td class="border px-4 py-2"><input id="Sutsune_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Sutsune_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Sutsune_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Darnation</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/d2/Darnation.png/revision/latest/scale-to-width-down/50?cb=20201205054424"</td>
+					<td class="border px-4 py-2"><input id="Darnation_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Darnation_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Darnation_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Thanatos</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/9b/Thanatos.png/revision/latest/scale-to-width-down/45?cb=20201205054424"</td>
+					<td class="border px-4 py-2"><input id="Thanatos_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Thanatos_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Thanatos_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Rainbow Blob</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/0/07/Rainbow_Blob.png/revision/latest/scale-to-width-down/50?cb=20201205054424"</td>
+					<td class="border px-4 py-2"><input id="Rainbow_Blob_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rainbow_Blob_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rainbow_Blob_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Changeling</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/92/Changeling.png/revision/latest/scale-to-width-down/35?cb=20201205053859"</td>
+					<td class="border px-4 py-2"><input id="Changeling_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Changeling_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Changeling_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">King Blob</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/95/King_Blob.png/revision/latest/scale-to-width-down/41?cb=20201205055553"</td>
+					<td class="border px-4 py-2"><input id="King_Blob_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="King_Blob_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="King_Blob_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Worm</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/52/Worm.png/revision/latest/scale-to-width-down/42?cb=20201205055552"</td>
+					<td class="border px-4 py-2"><input id="Worm_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Worm_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Worm_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Vodinoy</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/0/0c/Vodinoy.png/revision/latest/scale-to-width-down/50?cb=20201206130218"</td>
+					<td class="border px-4 py-2"><input id="Vodinoy_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vodinoy_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vodinoy_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Aazerach</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/59/Aazerach.png/revision/latest/scale-to-width-down/41?cb=20201206130217"</td>
+					<td class="border px-4 py-2"><input id="Aazerach_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Aazerach_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Aazerach_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Diavola</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/e/ed/Diavola.png/revision/latest/scale-to-width-down/38?cb=20201206130217"</td>
+					<td class="border px-4 py-2"><input id="Diavola_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Diavola_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Diavola_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Gryphonix</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/d9/Gryphonix.png/revision/latest/scale-to-width-down/50?cb=20201206130217"</td>
+					<td class="border px-4 py-2"><input id="Gryphonix_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Gryphonix_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Gryphonix_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Vertraag</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/4/4a/Vertraag.png/revision/latest/scale-to-width-down/40?cb=20201206130218"</td>
+					<td class="border px-4 py-2"><input id="Vertraag_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vertraag_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Vertraag_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Mad Lord</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/9/91/Mad_Lord.png/revision/latest/scale-to-width-down/50?cb=20201206130217"</td>
+					<td class="border px-4 py-2"><input id="Mad_Lord_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mad_Lord_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Mad_Lord_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Ascendant</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/5/55/Ascendant.png/revision/latest/scale-to-width-down/39?cb=20220629232117"</td>
+					<td class="border px-4 py-2"><input id="Ascendant_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ascendant_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Ascendant_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Fumagus</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/8e/Fumagus.png/revision/latest/scale-to-width-down/42?cb=20220629232126"</td>
+					<td class="border px-4 py-2"><input id="Fumagus_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Fumagus_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Fumagus_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Rampede</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/6/69/Rampede.png/revision/latest/scale-to-width-down/50?cb=20220629232132"</td>
+					<td class="border px-4 py-2"><input id="Rampede_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rampede_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rampede_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Rathops</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/c/c9/Rathops.png/revision/latest/scale-to-width-down/50?cb=20220629232134"</td>
+					<td class="border px-4 py-2"><input id="Rathops_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rathops_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Rathops_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Krakaturtle</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/e/e9/Krakaturtle.png/revision/latest/scale-to-width-down/46?cb=20220629232129"</td>
+					<td class="border px-4 py-2"><input id="Krakaturtle_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Krakaturtle_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Krakaturtle_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Tar Blob</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/d/d4/Tar_Blob.png/revision/latest/scale-to-width-down/50?cb=20220629232137"</td>
+					<td class="border px-4 py-2"><input id="Tar_Blob_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Tar_Blob_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Tar_Blob_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Amberlgna</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/84/Amberlgna.png/revision/latest/scale-to-width-down/30?cb=20220629232114"</td>
+					<td class="border px-4 py-2"><input id="Amberlgna_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Amberlgna_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Amberlgna_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Dracomer</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/b/bc/Dracomer.png/revision/latest/scale-to-width-down/50?cb=20220629232123"</td>
+					<td class="border px-4 py-2"><input id="Dracomer_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dracomer_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Dracomer_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Terradrile</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/7/74/Terradrile.png/revision/latest/scale-to-width-down/50?cb=20220629232140"</td>
+					<td class="border px-4 py-2"><input id="Terradrile_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Terradrile_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Terradrile_Dark" type="checkbox"></td>
+				</tr>
+				<tr class="hover:bg-slate-100">
+					<td class="border px-4 py-2">Bard</td>
+					<td class="border px-4 py-2"><img src="https://static.wikia.nocookie.net/monster-sanctuary/images/8/82/Bard.png/revision/latest/scale-to-width-down/45?cb=20220629232120"</td>
+					<td class="border px-4 py-2"><input id="Bard_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Bard_Light" type="checkbox"></td>
+					<td class="border px-4 py-2"><input id="Bard_Dark" type="checkbox"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
