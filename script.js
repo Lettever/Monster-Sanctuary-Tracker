@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     table.addEventListener('click', function(e) {
         let tr = e.target.closest('tr')
-        if (!e.target.matches('input[type="checkbox"]')) { // only <td> (not checkbox element) 
+        if (!e.target.matches('input[type="checkbox"]')) {
             const c = e.target.querySelector('input[type="checkbox"]');
             if (c === null) {
                 return;
