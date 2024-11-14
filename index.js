@@ -3,28 +3,16 @@ const monster_data = require('./monsters.json');
 const output_file = './index.html';
 
 const monster_table = monster_data.map(({name, src}) => create_row(name, src)).join('');
-let data = `<!doctype html>
+let data = `<!DOCTYPE html>
+<html>
 <head>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="script.js"></script>
-	<style>
-		td {
-			text-align: center;
-			vertical-align: middle;
-		}
-		img {
-			margin-left: auto;
-			margin-right: auto;
-		}
-		table {
-			margin-bottom: 1rem;
-		}
-	</style>
 </head>
 <body>
 	<div class="max-w-md mx-auto">
 		<h1 class="text-3xl font-bold"><span id="span1"></span>/<span id="span2"></span></h1>
-		<table class="table-auto" id="mainTable">
+		<table class="table-auto mb-4" id="mainTable">
 			<thead>
 				<tr>
 					<th class="px-4 py-2">Name</th>
@@ -38,16 +26,17 @@ let data = `<!doctype html>
 			</tbody>
 		</table>
 	</div>
-</body>`;
+</body>
+</html>`;
 fs.writeFile(output_file, data, function(err) { if(err) console.error(err); });
 function create_row(name, src) {
 	const name2 = name.replace(" ", "_");
 	return `
 				<tr class="hover:bg-slate-100">
-					<td class="border px-4 py-2">${name}</td>
-					<td class="border px-4 py-2"><img src="${src}"</td>
-					<td class="border px-4 py-2"><input id="${name2}_Normal" type="checkbox"></td>
-					<td class="border px-4 py-2"><input id="${name2}_Light" type="checkbox"></td>
-					<td class="border px-4 py-2"><input id="${name2}_Dark" type="checkbox"></td>
+					<td class="border px-4 py-2 text-center align-middle">${name}</td>
+					<td class="border px-4 py-2"><img class="mx-auto" src="${src}"></td>
+					<td class="border px-4 py-2 text-center align-middle"><input id="${name2}_Normal" type="checkbox"></td>
+					<td class="border px-4 py-2 text-center align-middle"><input id="${name2}_Light" type="checkbox"></td>
+					<td class="border px-4 py-2 text-center align-middle"><input id="${name2}_Dark" type="checkbox"></td>
 				</tr>`;
 }
